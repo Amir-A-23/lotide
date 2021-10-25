@@ -7,13 +7,12 @@ const assertEqual = function(actual, expected) {
 };
 
 const head = function(arr) {
-  if (arr === undefined || arr.length == 0) {
+  if (arr === undefined || arr.length === 0) {
     return undefined;
-  }
-  else {
+  } else {
     return arr[0];
-  } 
-}
+  }
+};
 assertEqual(head([5,6,7]), 5);
 assertEqual(head([5,6,7]), 6);
 assertEqual(head([]), 5);
