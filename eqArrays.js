@@ -7,22 +7,22 @@ const assertEqual = function(actual, expected) {
 };
 
 let eqArrays = (arrayOne, arrayTwo) => {
-  if(arrayOne.length !== arrayTwo.length){
+  if (arrayOne.length !== arrayTwo.length) {
     return false;
-  } else{
+  } else {
+    let match = true;
     for (let i = 0; i < arrayOne.length; i++) {
       console.log('Array One:', arrayOne[i], 'Array Two:', arrayTwo[i]);
-      if(arrayOne[i] === arrayTwo[i]){
+      if (arrayOne[i] === arrayTwo[i]) {
         //console.log('Array One:', arrayOne[i], 'Array Two:', arrayTwo[i]);
         match = true;
-      }
-      else{
+      } else {
         match = false;
         return match;
       }
     }
-    return match
+    return match;
   }
-}
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 3]), true); // => should PASS
