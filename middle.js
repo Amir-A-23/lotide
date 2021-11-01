@@ -9,8 +9,8 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 
-let eqArrays = (arrayOne, arrayTwo) => {
-  if (arrayOne.length !== arrayTwo.length) return false; 
+const eqArrays = (arrayOne, arrayTwo) => {
+  if (arrayOne.length !== arrayTwo.length) return false;
   else {
     for (let i = 0; i < arrayOne.length; i++) {
       if (arrayOne[i] !== arrayTwo[i]) return false;
@@ -19,13 +19,13 @@ let eqArrays = (arrayOne, arrayTwo) => {
   return true;
 };
 
-let middle = (inputArray) => {
+const middle = (inputArray) => {
   const middleArray = [];
-  if (inputArray.length <= 2){
-    return middleArray;  
-  } else if(inputArray.length % 2 === 1) {
+  if (inputArray.length <= 2) {
+    return middleArray;
+  } else if (inputArray.length % 2 === 1) {
     middleArray.push(inputArray[Math.floor(inputArray.length / 2)]);
-  } else if(inputArray.length % 2 === 0){
+  } else if (inputArray.length % 2 === 0) {
     middleArray.push(inputArray[inputArray.length / 2 - 1]);
     middleArray.push(inputArray[inputArray.length / 2]);
   }
